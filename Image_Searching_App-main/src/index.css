@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  width: 780px;
+}
+
+.form-control ::placeholder {
+  color: blanchedalmond;
+}
+
+.dropdown select {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.flex {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 10px;
+}
+
+.flex .items {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.flex .items img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 10px;
+  border: 2px solid rgb(243, 243, 240);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.flex .items img:hover {
+  transform: scale(1.1);
+  border: 2px solid yellow;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 500px;
+}
+
+input.form-control {
+  width: 100%;
+}
+
+@media (min-width: 319px) and (max-width:769px) {
+  body {
+    padding: 0px 20px;
+  }
+
+  .nav .button {
+    display: none;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 770px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .flex .items img {
+    width: 100%;
+    max-width: 80%;
+  }
+}
